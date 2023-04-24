@@ -14,6 +14,18 @@ app.post('/student/Insert', ( req, res)=>{
     res.send(' Insert a new Student')
 })
 
+// CONTACT PAGE ROUTING
+app.get('/contact', ( req, res )=>{
+    res.send('Contact Page')
+})
+
+// PAGE NOT FOUND
+
+app.get('*', ( req, res ) =>{
+    res.send('Page Not Found')
+})
+
+
 app.listen(port, ()=>{
     console.log(` Server is listening  http://localhost:${port}`)
 })
