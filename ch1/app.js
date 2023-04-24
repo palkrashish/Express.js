@@ -17,3 +17,18 @@ app.post('/student/Insert', ( req, res)=>{
 app.listen(port, ()=>{
     console.log(` Server is listening  http://localhost:${port}`)
 })
+
+
+
+
+// .GET - RETRRIVE DATA {DATA KO DIKHANA}
+
+// .POST - CREATE /INSERT DATA
+
+// .PUT -  COMPLETELY UPDATE DATA
+
+// .PATCH - PARITALLY UPDATE DATA
+
+// .DELETE - DELETE DATA
+
+// .ALL - ANY HTTP REQUEST METHOD in express  have this method {ALL}
