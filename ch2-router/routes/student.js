@@ -1,23 +1,29 @@
 import express from 'express'
 const router = express.Router()
-
-router.get('/all', (req, res) =>{
-    res.send('all student')
-})
+import { allStudent, insertStudent,updateStudent} from '../controller/studentController.js';
 
 
-router.post('/insert', (req, res) =>{
-    res.send('Creation of new student')
-})
+router.get('/all', allStudent)
+router.post('/insert', insertStudent)
+router.put('/update', updateStudent)
+
+// router.get('/all', (req, res) =>{
+//     res.send('all student')
+// })
 
 
-router.put('/update', (req, res) =>{
-    res.send('Update student')
-})
+// router.post('/insert', (req, res) =>{
+//     res.send('Creation of new student')
+// })
 
 
-router.delete('/delete', (req, res) =>{
-    res.send('Delete student')
-})
+// router.put('/update', (req, res) =>{
+//     res.send('Update student')
+// })
+
+
+// router.delete('/delete', (req, res) =>{
+//     res.send('Delete student')
+// })
 
 export default router;
