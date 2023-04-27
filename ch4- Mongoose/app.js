@@ -1,19 +1,15 @@
-import express from 'express'
-const app = express()
+import express from "express";
+import connectdb from "./db/connectdb.js";
+const app = express();
 
-const port = process.env.PORT|| '3000'
-import connectdb from './db/connectdb.js'
-// import mongoose from 'mongoose'
+const port = process.env.PORT || "3000";
 
+const DATABASE_URL = "mongodb://127.0.0.1:27017/schholdb";
+connectdb(DATABASE_URL);
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 
-// mongoose.connect("mongodb://127.0.0.1:27017/schoodb").then(()=>{
-//     console.log('connect mongoose successfully')
-// })
-connectdb()
-app.get('/', (req, res)=>{
-    res.send('hello')
-})
-
-app.listen(port, ()=>{
-    console.log(`server is running http://localhost:${port}`)
-})
+app.listen(port, () => {
+  console.log(`server is running http://localhost:${port}`);
+});
