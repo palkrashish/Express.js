@@ -1,11 +1,12 @@
+import { join } from "path"
+
 const allStudent = (req, res)=>{
-    res.send('Hello all student')
+    // res.send('Hello all student')
+
+    res.sendfile(join(process.cwd(), 'views', 'index.html'))
 }
 
-const deleteStudent = (req, res)=>{
-    res.send('delete Student')
-}
 
 
 
-export { allStudent, deleteStudent}
+export { allStudent}

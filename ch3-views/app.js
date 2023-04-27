@@ -1,12 +1,12 @@
 import express from 'express'
 
 const app = express()
-import stu from './routes/student.js'
+import web from './routes/web.js'
 
 
 const port = process.env.PORT || '3000'
 
-app.use('/stu', stu)
+app.use('/', web)
 
 // app.get('/', ( req, res )=>{
 // res.send('Hello Ji')
