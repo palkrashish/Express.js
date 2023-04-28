@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const createDoc = async () => {
+const createDoc = async (nm, ag, fe, hob, isact, comt) => {
   try {
     // DEFINING SCHEMA
 
@@ -30,12 +30,12 @@ const createDoc = async () => {
     // CREATING A NEW DOCUMENT
 
     const studentDoc = new studentModel({
-      name: "Ranjit",
-      age: 49,
-      fees: 8500.40,
-      hobbies: ["enjoy, Cricket, Singing"],
-      isActive: true,
-      comments: [{ value: "This is good mongoose" }],
+      name: nm,
+      age: ag,
+      fees: fe,
+      hobbies: hob,
+      isActive: isact,
+      comments: comt,
     });
 
     // Saving Document

@@ -9,7 +9,7 @@ import createDoc from  "./models/Student.js";
 connectdb(DABASE_URL)
 
 //Create and Save Document
-createDoc()
+createDoc('Ajay', 34, 7800.20, ['Dancing', 'Cricket'], false, [{value: 'leearning mongoose'}])
 
 app.get('/', (req, res)=>{
     res.send('hello dear')
