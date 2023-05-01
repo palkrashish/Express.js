@@ -27,7 +27,10 @@ const studentModel = mongoose.model("student", studentSchema);
 
 const getAllDoc = async () =>{
     const result = await studentModel.find()
-    console.log(result)
+    // console.log(result)
+    result.forEach((item)=>{
+        console.log(item.name, item.age, item. hobbies)
+    })
 }
 
 export { getAllDoc }
