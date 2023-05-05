@@ -25,12 +25,18 @@ const studentModel = mongoose.model("student", studentSchema);
 
 // RETRIEVE ALL DOCUMENT
 
-const getAllDoc = async () =>{
-    const result = await studentModel.find()
-    // console.log(result)
-    result.forEach((item)=>{
-        console.log(item.name, item.age, item. hobbies)
-    })
-}
+// const getAllDoc = async () =>{
+//     const result = await studentModel.find()
+//     // console.log(result)
+//     result.forEach((item)=>{
+//         console.log(item.name, item.age, item. hobbies)
+//     })
+// }
+// RETRIEVE A SPECIFIC FILEDS
 
-export { getAllDoc }
+const getSpecifiFields = async () =>{
+  const result = await studentModel.find().select('name age')
+  console.log(result)
+}
+// export { getAllDoc }
+export { getSpecifiFields }
